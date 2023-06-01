@@ -20,7 +20,6 @@ export function BuscarDados() {
         buscarDadosApi().then(dado => setTarefasList(dado))
     }, [])
 
-    console.log(tarefasList)
 
     return (
         <>
