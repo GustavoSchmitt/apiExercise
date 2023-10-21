@@ -1,4 +1,6 @@
 import './App.css';
+import './index.css'
+import 'tailwindcss/defaultTheme'
 import axios from 'axios';
 import { useEffect, useState, useRef } from 'react';
 import { PokeRender } from './js/pokeRender';
@@ -15,12 +17,12 @@ async function pokeApiSearch() {
     // .reduce
 
     pokeInfoApi.map(a => pokeInfoApiObj.push({
-       
-          pokemon: true,
-          name: a.data.name,
-          pokemonObj: a,
-          imageFront: a.data.sprites.front_default
-        })
+
+      pokemon: true,
+      name: a.data.name,
+      pokemonObj: a,
+      imageFront: a.data.sprites.front_default
+    })
     )
 
 
@@ -41,9 +43,10 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <h3>Sapato</h3>
-      <div ref={inputRef}>
+    <div className='bg-emerald-400/40 bg-poke-main-bg bg-cover h-[100vh] flex flex-col items-center justify-center gap-10'>
+      <div>
+        <h3 className='font-bold text-7xl'>Pikomons<span className='text-lg font-normal'> by Nal do canal</span></h3>
+        
 
       </div>
       <PokeRender pokemonApi={pokeApi} />

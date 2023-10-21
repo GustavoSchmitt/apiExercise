@@ -1,8 +1,11 @@
 .pokemonsName{
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 1rem;
   font-size: 1.25rem;
+  overflow-x: scroll;
+  padding-bottom: 16px;
+  width: 100%;
 }
 .pokeCard{
   display: flex;
@@ -11,11 +14,10 @@
   align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
-  border: solid 0.1rem #5555;
+  border: solid 0.1rem ;
   border-radius: 1rem;
-  width: 12rem;
+  min-width: 12rem;
   height: 16rem;
-  color: #232323;
 }
 @keyframes botao {
   0% {

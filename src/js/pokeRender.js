@@ -1,5 +1,4 @@
 import React from "react"
-import '../App.css'
 
 export function PokeRender({ pokemonApi }) {
 
@@ -11,15 +10,14 @@ export function PokeRender({ pokemonApi }) {
         </div>
     } else {
         return (
-            <div>
-                <h3>Pokemons</h3>
-                <div className="pokemonsName">
+            <div className="w-full overflow-hidden">
+                <div className="pokemonsName overflow-x-auto px-5">
 
                     {pokemonApi.map(poke => {
                         return (
-                            <div className="pokeCard" key={poke.name}>
-                                <img className="pokeImage" key={poke.imageFront} src={poke.imageFront} />
-                                <div className="pokeName">
+                            <div className="pokeCard bg-blue-100 text-sky-900" key={poke.name}>
+                                <img className="pokeImage shadow-image-card" key={poke.imageFront} src={poke.imageFront} />
+                                <div className="pokeName ">
                                     {poke.name}
                                 </div>
 
